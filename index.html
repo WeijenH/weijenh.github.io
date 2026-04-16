@@ -4,9 +4,13 @@
   <title>Wei Jen Huang Portfolio</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Segoe UI', Arial;
       margin: 0;
+      font-family: 'Segoe UI', Arial;
       background: #0f172a;
       color: #e2e8f0;
       scroll-behavior: smooth;
@@ -19,8 +23,9 @@
       width: 100%;
       background: rgba(15, 23, 42, 0.9);
       backdrop-filter: blur(10px);
-      padding: 15px;
+      padding: 15px 0;
       text-align: center;
+      z-index: 1000;
     }
 
     nav a {
@@ -37,7 +42,7 @@
 
     /* SECTION */
     section {
-      padding: 100px 20px;
+      padding: 120px 20px;
       max-width: 1000px;
       margin: auto;
     }
@@ -45,11 +50,12 @@
     /* HERO */
     #home {
       height: 100vh;
-      background: linear-gradient(to right, #0f172a, #1e293b);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      background: linear-gradient(to right, #0f172a, #1e293b);
+      text-align: center;
     }
 
     h1 {
@@ -62,18 +68,12 @@
       margin-bottom: 40px;
     }
 
-    /* PROJECT GRID */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    /* PROJECT CARD */
+    /* PROJECT BLOCK */
     .project {
       background: #1e293b;
-      padding: 20px;
+      padding: 30px;
       border-radius: 15px;
+      margin-bottom: 50px;
       transition: 0.3s;
     }
 
@@ -82,22 +82,30 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
 
-    /* IMAGE */
-    img {
+    .project img {
       width: 100%;
+      max-width: 900px;
+      display: block;
+      margin: 20px auto;
       border-radius: 10px;
-      margin-top: 10px;
     }
 
-    /* EXPERIENCE */
     ul {
       line-height: 1.6;
     }
 
+    li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: #38bdf8;
+    }
+
     /* MOBILE */
     @media (max-width: 800px) {
-      .projects-grid {
-        grid-template-columns: 1fr;
+      section {
+        padding: 100px 15px;
       }
     }
 
@@ -109,58 +117,64 @@
 <!-- NAVBAR -->
 <nav>
   <a href="#home">Home</a>
-  <a href="#about Wei Jen">About</a>
-  <a href="#R&D projects">Projects</a>
-  <a href="#internship experience">Experience</a>
-  <a href="#My contact">Contact</a>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#experience">Experience</a>
+  <a href="#contact">Contact</a>
 </nav>
 
 <!-- HOME -->
 <section id="home">
   <h1>Wei Jen Huang</h1>
-  <p>Electrical Engineering @ UCSD</p>
-  <p style="color:#38bdf8;">IC design • Embedded Systems • process engineering</p>
+  <p>Electrical Engineering @ UC San Diego</p>
+  <p style="color:#38bdf8;">IC Design • Embedded Systems • Process Engineering</p>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
-  <h2>About Wei Jen </h2>
-  <p>
-Kind, passionate, self-motivated student. I am a high energy individual with team spirit, caring,  passionate, self-motivated, and I learn all the time. Instead of working on example projects,  I love finding problems and creating new tasks to solve them. 
-  </p>
+  <h2>About Me</h2>
+  <ul>
+    <li>Electrical Engineering student at UCSD</li>
+    <li>Focused on IC design, embedded systems, and hardware innovation</li>
+    <li>Hands-on experience building real engineering systems</li>
+    <li>Strong problem-solving skills and fast learner</li>
+  </ul>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
   <h2>Projects</h2>
 
-  <div class="projects-grid">
+  <div class="project">
+    <h3>Bluetooth RFID Communication</h3>
+    <ul>
+      <li><b>Problem:</b> RFID systems lacked mobile integration</li>
+      <li><b>Solution:</b> Designed BLE firmware using GATT protocol</li>
+      <li><b>Result:</b> Enabled real-time communication with iPhone</li>
+    </ul>
+    <img src="Oscilloscope.jpg">
+  </div>
 
-    <div class="project">
-      <h3>Bluetooth RFID Communication</h3>
-      <p><b>Problem:</b> RFID systems lacked mobile integration</p>
-      <p><b>Solution:</b> Designed BLE firmware using GATT</p>
-      <p><b>Result:</b> Enabled iPhone communication</p>
-      <img src="rfid.jpg">
-    </div>
+  <div class="project">
+    <h3>Atmospheric Plasma Device</h3>
+    <ul>
+      <li><b>Problem:</b> Limitations in sterilization technology</li>
+      <li><b>Solution:</b> Built high-voltage plasma system</li>
+      <li><b>Result:</b> Functional working prototype</li>
+    </ul>
+    <img src="plasma.jpg">
+  </div>
 
-    <div class="project">
-      <h3>Atmospheric Plasma Device</h3>
-      <p><b>Problem:</b> Sterilization limitations</p>
-      <p><b>Solution:</b> High-voltage plasma system</p>
-      <p><b>Result:</b> Functional prototype</p>
-      <img src="plasma.jpg">
-    </div>
+  <div class="project">
+    <h3>Neuromorphic Retina Circuit</h3>
+    <ul>
+      <li><b>Problem:</b> Adaptive vision system</li>
+      <li><b>Solution:</b> Designed analog retina circuit</li>
+      <li><b>Result:</b> Adaptive gain and band-pass response</li>
+    </ul>
 
-    <div class="project">
-      <h3>Neuromorphic Retina Circuit</h3>
-      <p><b>Problem:</b> Adaptive vision system</p>
-      <p><b>Solution:</b> Analog retina circuit</p>
-      <p><b>Result:</b> Adaptive gain + band-pass</p>
-     
-          </div><img src="retina.jpg"><img src="biology.jpg">    </div>
-    </div>
-
+    <img src="retina.jpg">
+    <img src="biology.jpg">
   </div>
 
 </section>
@@ -169,32 +183,21 @@ Kind, passionate, self-motivated student. I am a high energy individual with tea
 <section id="experience">
   <h2>Experience</h2>
 
-  <p><b>Tesla – Process Engineering Intern</b><li> 2024 Spring & Summer internship </li></p>
+  <p><b>Tesla – Process Engineering Intern (2024)</b></p>
   <ul>
-    <li>Responsible: As Process Engineer, we are taking care of staff in production line daily function regarding production line. If anything regarding machine not working, we will be the first responder. This involve in Factory Shutdown manage, product inspection, and tooling design!</li>
-    <li>Achievement: I am the lead engineer design the welding machine. From no mechanical engineering background, I instantly learn SolidWork on my own time, and able to use Solidwork to carve our Car component and built a machine for production need on my own.</li>
-    <li>Secondly, I manage project with team +20 people, this involve my skill of organizing, persuading, analyze group decision, and skill of excution<li>
-    <li>Paint and plastic process engineer, Tesla Fremont factory first line responder engineer for the new 2025 Model Y. <li>
-    <li>Create a Welding machine by Solidwork AutoCAD for Tesla Model Y. Manage quality control, process team, ergonomics team. And Combine 3D printing skills, auto CAD together for making this machine successfully.
-    Kuka robots programming. Program robot movement, any routes, release and fetching. <li>
-    <li>Project Managing routes and time schedule for parts transferring  though the factory production line. <li>
-    <li>Built and supervising contractor and manage a big team <li>.
-    <li>Managing Replacing factory large scale combustion engines for toxic paint waste disposing process.<li>
-    <li><li>
-    
+    <li>First responder for production line failures and system issues</li>
+    <li>Designed welding machine using SolidWorks</li>
+    <li>Led engineering project with 20+ team members</li>
+    <li>Worked on process optimization, inspection, and tooling</li>
   </ul>
-</div>
- 
-      <img src="Tesla.jpg">
-</div>
 
-  <p><b>Telaeris – Embedded Engineer</b></p>
+  <img src="Tesla.jpg">
+
+  <p><b>Telaeris – Embedded Engineering Intern</b></p>
   <ul>
     <li>Developed BLE firmware for RFID systems</li>
-    <li>Enabled mobile communication integration</li>
-    <li>Integrated RFID system with mobile devices (iOS compatibility)</li>
-    <li>Enabled real-time wireless communication between embedded device and smartphone</li>
-    <li>Improved usability of traditional RFID systems</li>
+    <li>Integrated mobile communication with embedded devices</li>
+    <li>Enabled real-time wireless interaction</li>
   </ul>
 
 </section>
@@ -202,8 +205,10 @@ Kind, passionate, self-motivated student. I am a high energy individual with tea
 <!-- CONTACT -->
 <section id="contact">
   <h2>Contact</h2>
-  <p>Email: huangweijen111@gmail.com</p>
-  <p>GitHub: https://github.com/WeijenH</p>
+  <ul>
+    <li>Email: huangweijen111@gmail.com</li>
+    <li>GitHub: <a href="https://github.com/WeijenH">github.com/WeijenH</a></li>
+  </ul>
 </section>
 
 </body>
