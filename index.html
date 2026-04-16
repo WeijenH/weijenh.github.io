@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Peter Huang Portfolio</title>
+  <title>Wei Jen Huang Portfolio</title>
 
   <style>
     body {
       font-family: Arial;
       margin: 0;
+      background: #f9f9f9;
       scroll-behavior: smooth;
     }
 
@@ -15,18 +16,21 @@
       top: 0;
       width: 100%;
       background: black;
-      color: white;
       padding: 15px;
+      text-align: center;
     }
 
     nav a {
       color: white;
-      margin: 15px;
+      margin: 20px;
       text-decoration: none;
+      font-weight: bold;
     }
 
     section {
       padding: 80px 20px;
+      max-width: 900px;
+      margin: auto;
     }
 
     #home {
@@ -39,12 +43,24 @@
       align-items: center;
     }
 
-    .project {
-      border: 1px solid #ccc;
-      padding: 15px;
-      margin: 10px;
-      border-radius: 10px;
+    h1, h2 {
+      text-align: center;
     }
+
+    .project {
+      background: white;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
   </style>
 </head>
 
@@ -53,6 +69,7 @@
 <!-- NAVBAR -->
 <nav>
   <a href="#home">Home</a>
+  <a href="#about">About</a>
   <a href="#projects">Projects</a>
   <a href="#experience">Experience</a>
   <a href="#contact">Contact</a>
@@ -65,23 +82,42 @@
   <p>Circuits • Embedded Systems • Hardware Design</p>
 </section>
 
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am an electrical engineering student focused on circuit design,
+    embedded systems, and hardware prototyping. I enjoy building real systems,
+    from BLE communication devices to adaptive analog circuits.
+  </p>
+</section>
+
 <!-- PROJECTS -->
 <section id="projects">
   <h2>Projects</h2>
 
   <div class="project">
-    <h3>Bluetooth RFID System</h3>
-    <p>Built BLE communication system with RFID reader. Enabled two-way communication using GATT protocol.</p>
+    <h3>Bluetooth RFID Communication System</h3>
+    <p><b>Problem:</b> RFID systems lacked mobile integration.</p>
+    <p><b>Solution:</b> Designed BLE firmware using GATT protocol.</p>
+    <p><b>Result:</b> Enabled iPhone to communicate with RFID reader.</p>
+    <img src="rfid.jpg">
   </div>
 
   <div class="project">
     <h3>Atmospheric Plasma Device</h3>
-    <p>Designed medical sterilization system using high voltage plasma and Tesla coil principles.</p>
+    <p><b>Problem:</b> Medical sterilization limitations.</p>
+    <p><b>Solution:</b> Built high-voltage plasma system.</p>
+    <p><b>Result:</b> Functional sterilization prototype.</p>
+    <img src="plasma.jpg">
   </div>
 
   <div class="project">
     <h3>Neuromorphic Retina Circuit</h3>
-    <p>Designed adaptive analog circuit simulating human eye with band-pass behavior and gain control.</p>
+    <p><b>Problem:</b> Adaptive vision system needed.</p>
+    <p><b>Solution:</b> Designed analog retina circuit.</p>
+    <p><b>Result:</b> Achieved adaptive gain + band-pass behavior.</p>
+    <img src="circuit.jpg">
   </div>
 
 </section>
@@ -91,10 +127,16 @@
   <h2>Experience</h2>
 
   <p><b>Tesla – Process Engineering Intern</b></p>
-  <p>Worked on factory tools, welding systems, and managed production improvements.</p>
+  <ul>
+    <li>Improved factory tooling and welding systems</li>
+    <li>Managed production workflow</li>
+  </ul>
 
   <p><b>Telaeris – Embedded Engineer</b></p>
-  <p>Developed BLE firmware for RFID systems and enabled iPhone communication.</p>
+  <ul>
+    <li>Developed BLE firmware for RFID</li>
+    <li>Enabled mobile device communication</li>
+  </ul>
 
 </section>
 
@@ -102,6 +144,7 @@
 <section id="contact">
   <h2>Contact</h2>
   <p>Email: huangweijen111@gmail.com</p>
+  <p>GitHub: your-link</p>
 </section>
 
 </body>
