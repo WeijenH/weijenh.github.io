@@ -5,60 +5,100 @@
 
   <style>
     body {
-      font-family: Arial;
+      font-family: 'Segoe UI', Arial;
       margin: 0;
-      background: #f9f9f9;
+      background: #0f172a;
+      color: #e2e8f0;
       scroll-behavior: smooth;
     }
 
+    /* NAVBAR */
     nav {
       position: fixed;
       top: 0;
       width: 100%;
-      background: black;
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(10px);
       padding: 15px;
       text-align: center;
     }
 
     nav a {
-      color: white;
+      color: #e2e8f0;
       margin: 20px;
       text-decoration: none;
       font-weight: bold;
+      transition: 0.3s;
     }
 
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    /* SECTION */
     section {
-      padding: 80px 20px;
-      max-width: 900px;
+      padding: 100px 20px;
+      max-width: 1000px;
       margin: auto;
     }
 
+    /* HERO */
     #home {
       height: 100vh;
-      background: #111;
-      color: white;
+      background: linear-gradient(to right, #0f172a, #1e293b);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
 
-    h1, h2 {
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    h2 {
       text-align: center;
+      margin-bottom: 40px;
     }
 
+    /* PROJECT GRID */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    /* PROJECT CARD */
     .project {
-      background: white;
-      margin: 20px 0;
+      background: #1e293b;
       padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      transition: 0.3s;
     }
 
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    /* IMAGE */
     img {
       width: 100%;
       border-radius: 10px;
       margin-top: 10px;
+    }
+
+    /* EXPERIENCE */
+    ul {
+      line-height: 1.6;
+    }
+
+    /* MOBILE */
+    @media (max-width: 800px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
   </style>
@@ -79,7 +119,8 @@
 <section id="home">
   <h1>Wei Jen Huang</h1>
   <p>Electrical Engineering @ UCSD</p>
-  <p>Circuits • Embedded Systems • Hardware Design</p>
+  <p style="color:#38bdf8;">Circuits • Embedded Systems • Hardware Design</p>
+  <p style="color:#38bdf8;">Seeking Circuit / Hardware Internships</p>
 </section>
 
 <!-- ABOUT -->
@@ -96,29 +137,33 @@
 <section id="projects">
   <h2>Projects</h2>
 
-  <div class="project">
-    <h3>Bluetooth RFID Communication System</h3>
-    <p><b>Problem:</b> RFID systems lacked mobile integration.</p>
-    <p><b>Solution:</b> Designed BLE firmware using GATT protocol.</p>
-    <p><b>Result:</b> Enabled iPhone to communicate with RFID reader.</p>
-    <img src="rfid.jpg">
-  </div>
+  <div class="projects-grid">
 
-  <div class="project">
-    <h3>Atmospheric Plasma Device</h3>
-    <p><b>Problem:</b> Medical sterilization limitations.</p>
-    <p><b>Solution:</b> Built high-voltage plasma system.</p>
-    <p><b>Result:</b> Functional sterilization prototype.</p>
-    <img src="plasma.jpg">
-  </div>
+    <div class="project">
+      <h3>Bluetooth RFID Communication</h3>
+      <p><b>Problem:</b> RFID systems lacked mobile integration</p>
+      <p><b>Solution:</b> Designed BLE firmware using GATT</p>
+      <p><b>Result:</b> Enabled iPhone communication</p>
+      <img src="rfid.jpg">
+    </div>
 
-  <div class="project">
-    <h3>Neuromorphic Retina Circuit</h3>
-    <p><b>Problem:</b> Adaptive vision system needed.</p>
-    <p><b>Solution:</b> Designed analog retina circuit.</p>
-    <p><b>Result:</b> Achieved adaptive gain + band-pass behavior.</p>
-    <img src="retina.jpg">
-    <img src="biology.jpg">
+    <div class="project">
+      <h3>Atmospheric Plasma Device</h3>
+      <p><b>Problem:</b> Sterilization limitations</p>
+      <p><b>Solution:</b> High-voltage plasma system</p>
+      <p><b>Result:</b> Functional prototype</p>
+      <img src="plasma.jpg">
+    </div>
+
+    <div class="project">
+      <h3>Neuromorphic Retina Circuit</h3>
+      <p><b>Problem:</b> Adaptive vision system</p>
+      <p><b>Solution:</b> Analog retina circuit</p>
+      <p><b>Result:</b> Adaptive gain + band-pass</p>
+      <img src="retina.jpg">
+      <img src="retina_biology.jpg">
+    </div>
+
   </div>
 
 </section>
@@ -135,8 +180,8 @@
 
   <p><b>Telaeris – Embedded Engineer</b></p>
   <ul>
-    <li>Developed BLE firmware for RFID</li>
-    <li>Enabled mobile device communication</li>
+    <li>Developed BLE firmware for RFID systems</li>
+    <li>Enabled mobile communication integration</li>
   </ul>
 
 </section>
@@ -145,7 +190,7 @@
 <section id="contact">
   <h2>Contact</h2>
   <p>Email: huangweijen111@gmail.com</p>
-  <p>GitHub: your-link</p>
+  <p>GitHub: https://github.com/WeijenH</p>
 </section>
 
 </body>
