@@ -16,7 +16,6 @@
       scroll-behavior: smooth;
     }
 
-    /* NAVBAR */
     nav {
       position: fixed;
       top: 0;
@@ -33,21 +32,18 @@
       margin: 20px;
       text-decoration: none;
       font-weight: bold;
-      transition: 0.3s;
     }
 
     nav a:hover {
       color: #38bdf8;
     }
 
-    /* SECTION */
     section {
       padding: 120px 20px;
       max-width: 1000px;
       margin: auto;
     }
 
-    /* HERO */
     #home {
       height: 100vh;
       display: flex;
@@ -60,7 +56,6 @@
 
     h1 {
       font-size: 3em;
-      margin-bottom: 10px;
     }
 
     h2 {
@@ -68,18 +63,11 @@
       margin-bottom: 40px;
     }
 
-    /* PROJECT BLOCK */
     .project {
       background: #1e293b;
       padding: 30px;
       border-radius: 15px;
       margin-bottom: 50px;
-      transition: 0.3s;
-    }
-
-    .project:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
 
     .project img {
@@ -89,23 +77,17 @@
       margin: 20px auto;
       border-radius: 10px;
     }
+
     ul {
       line-height: 1.6;
     }
 
     li {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     a {
       color: #38bdf8;
-    }
-
-    /* MOBILE */
-    @media (max-width: 800px) {
-      section {
-        padding: 100px 15px;
-      }
     }
 
   </style>
@@ -113,7 +95,6 @@
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
   <a href="#home">Home</a>
   <a href="#about">About</a>
@@ -122,48 +103,47 @@
   <a href="#contact">Contact</a>
 </nav>
 
-<!-- HOME -->
 <section id="home">
   <h1>Wei Jen Huang</h1>
-  <p>Electrical Engineering @ UC San Diego</p>
+  <p>Electrical Engineering @ UCSD</p>
   <p style="color:#38bdf8;">IC Design • Embedded Systems • Process Engineering</p>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <h2>About Me</h2>
   <ul>
     <li>Electrical Engineering student at UCSD</li>
-    <li>Focused on IC design, embedded systems, and hardware innovation</li>
-    <li>Hands-on experience building real engineering systems</li>
-    <li>Strong problem-solving skills and fast learner</li>
+    <li>Focused on IC design and embedded systems</li>
+    <li>Hands-on hardware + firmware experience</li>
+    <li>Strong problem-solving and fast learner</li>
   </ul>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
   <h2>Projects</h2>
 
   <div class="project">
     <h3>Bluetooth RFID Communication</h3>
     <ul>
-      <li><b>Problem:</b> RFID systems lacked mobile integration, light and easy portable device can be compatible to not only company device but everyone mobile phone</li>
-      <li><b>Solution:</b> Designed BLE firmware using GATT protocol</li>
-      <li><b> Innovation:</b> Innovation communication of 2 way communication in bluetooth low energy. On Githun, innovate and change standardized and rigid one way communication between 2 devices. I programmed and modified code into 2 ways of communication.</li>
-      <li><b>How do I make RFID communication though bluetooth:</b> Embedded bluetooth low energy communication on top of  the old way serial communication method. We can read an ID number wireless from any RFID card into any phone in the world wirelessly in a much lower energy and power efficient communication.
-Bluetooth, and serial signal communication: Code ESP32 and enable any smartphone to communicate with our RFID device in 2 ways. I wrote code to enable the switching of communication mode physically in between low energy bluetooth and serial communication. And send commands from the phone.</li>
-
-      <a href="https://telaeris.com/" target="_blank">Go to Telaeris</a>
+      <li><b>Problem:</b> RFID lacked mobile integration</li>
+      <li><b>Solution:</b> Built BLE firmware using GATT</li>
+      <li><b>Innovation:</b> Enabled bidirectional BLE communication</li>
+      <li><b>System:</b> ESP32 + BLE + serial switching</li>
+      <li>
+        <a href="https://telaeris.com/" target="_blank">
+          View Company (Telaeris)
+        </a>
+      </li>
     </ul>
-    <img src="Oscilliscope.jpg">
+    <img src="Oscilloscope.jpg">
   </div>
 
   <div class="project">
     <h3>Atmospheric Plasma Device</h3>
     <ul>
-      <li><b>Problem:</b> Limitations in sterilization technology</li>
-      <li><b>Solution:</b> Built high-voltage plasma system</li>
-      <li><b>Result:</b> Functional working prototype</li>
+      <li><b>Problem:</b> Sterilization limitations</li>
+      <li><b>Solution:</b> High-voltage plasma system</li>
+      <li><b>Result:</b> Working prototype</li>
     </ul>
     <img src="plasma.jpg">
   </div>
@@ -172,46 +152,55 @@ Bluetooth, and serial signal communication: Code ESP32 and enable any smartphone
     <h3>Neuromorphic Retina Circuit</h3>
     <ul>
       <li><b>Problem:</b> Adaptive vision system</li>
-      <li><b>Solution:</b> Designed analog retina circuit</li>
-      <li><b>Result:</b> Adaptive gain and band-pass response</li>
+      <li><b>Solution:</b> Analog retina circuit</li>
+      <li><b>Result:</b> Adaptive gain + band-pass response</li>
     </ul>
-
     <img src="retina.jpg">
     <img src="biology.jpg">
   </div>
 
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience">
   <h2>Experience</h2>
-<div class="project">
-  <p><b>Tesla – Process Engineering Intern (2024)</b></p>
-  <ul>
-    <li>First responder for production line failures and system issues</li>
-    <li>Designed welding machine using SolidWorks</li>
-    <li>Led engineering project with 20+ team members</li>
-    <li>Worked on process optimization, inspection, and tooling</li>
-  </ul>
 
-  <img src="Tesla.jpg">
-</div>
-  <p><b>Telaeris – Embedded Engineering Intern</b></p>
-  <ul>
-    <li>Developed BLE firmware for RFID systems</li>
-    <li>Integrated mobile communication with embedded devices</li>
-    <li>Enabled real-time wireless interaction</li>
-     <li>Go to Telaeris: <a href="https://telaeris.com/">telaeris.com</a></li>
-  </ul>
+  <div class="project">
+    <h3>Tesla – Process Engineering Intern (2024)</h3>
+    <ul>
+      <li>First responder for production line failures</li>
+      <li>Designed welding machine (SolidWorks)</li>
+      <li>Led team of 20+ engineers</li>
+      <li>Worked on process optimization and tooling</li>
+    </ul>
+    <img src="Tesla.jpg">
+  </div>
+
+  <div class="project">
+    <h3>Telaeris – Embedded Engineering Intern</h3>
+    <ul>
+      <li>Developed BLE firmware for RFID systems</li>
+      <li>Integrated mobile communication</li>
+      <li>Enabled real-time wireless control</li>
+      <li>
+        <a href="https://telaeris.com/" target="_blank">
+          Visit Telaeris
+        </a>
+      </li>
+    </ul>
+  </div>
 
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <h2>Contact</h2>
   <ul>
     <li>Email: huangweijen111@gmail.com</li>
-    <li>GitHub: <a href="https://github.com/WeijenH">github.com/WeijenH</a></li>
+    <li>
+      GitHub:
+      <a href="https://github.com/WeijenH" target="_blank">
+        github.com/WeijenH
+      </a>
+    </li>
   </ul>
 </section>
 
